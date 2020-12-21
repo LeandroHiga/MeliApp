@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1989BAB92590EB440014FF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAB82590EB440014FF77 /* AppDelegate.swift */; };
 		1989BABB2590EB440014FF77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BABA2590EB440014FF77 /* SceneDelegate.swift */; };
-		1989BABD2590EB440014FF77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BABC2590EB440014FF77 /* ViewController.swift */; };
+		1989BABD2590EB440014FF77 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BABC2590EB440014FF77 /* SearchViewController.swift */; };
 		1989BAC02590EB440014FF77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1989BABE2590EB440014FF77 /* Main.storyboard */; };
 		1989BAC22590EB480014FF77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1989BAC12590EB480014FF77 /* Assets.xcassets */; };
 		1989BAC52590EB480014FF77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1989BAC32590EB480014FF77 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		1989BAB52590EB440014FF77 /* MeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1989BAB82590EB440014FF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1989BABA2590EB440014FF77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1989BABC2590EB440014FF77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1989BABC2590EB440014FF77 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1989BABF2590EB440014FF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1989BAC12590EB480014FF77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1989BAC42590EB480014FF77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		1989BAB72590EB440014FF77 /* MeliApp */ = {
 			isa = PBXGroup;
 			children = (
+				1989BACF2590FF1C0014FF77 /* Model */,
+				1989BACE2590FF110014FF77 /* View */,
+				1989BAD02590FF230014FF77 /* Controller */,
 				1989BAB82590EB440014FF77 /* AppDelegate.swift */,
 				1989BABA2590EB440014FF77 /* SceneDelegate.swift */,
-				1989BABC2590EB440014FF77 /* ViewController.swift */,
-				1989BABE2590EB440014FF77 /* Main.storyboard */,
 				1989BAC12590EB480014FF77 /* Assets.xcassets */,
 				1989BAC32590EB480014FF77 /* LaunchScreen.storyboard */,
 				1989BAC62590EB480014FF77 /* Info.plist */,
 			);
 			path = MeliApp;
+			sourceTree = "<group>";
+		};
+		1989BACE2590FF110014FF77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1989BABE2590EB440014FF77 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1989BACF2590FF1C0014FF77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1989BAD02590FF230014FF77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1989BABC2590EB440014FF77 /* SearchViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1989BABD2590EB440014FF77 /* ViewController.swift in Sources */,
+				1989BABD2590EB440014FF77 /* SearchViewController.swift in Sources */,
 				1989BAB92590EB440014FF77 /* AppDelegate.swift in Sources */,
 				1989BABB2590EB440014FF77 /* SceneDelegate.swift in Sources */,
 			);
