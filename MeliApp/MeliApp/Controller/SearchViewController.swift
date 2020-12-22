@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.tintColor = .black
         searchButton.isEnabled = false
         
         searchTextField.delegate = self
