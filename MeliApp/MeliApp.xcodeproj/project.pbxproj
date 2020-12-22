@@ -16,6 +16,7 @@
 		1989BAD425910C920014FF77 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD325910C920014FF77 /* ProductManager.swift */; };
 		1989BAD725910F120014FF77 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD625910F120014FF77 /* ProductData.swift */; };
 		1989BAFA2591305A0014FF77 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAF92591305A0014FF77 /* ProductsViewController.swift */; };
+		19C40FAD25923433004D763B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C40FAC25923433004D763B /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1989BAD325910C920014FF77 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		1989BAD625910F120014FF77 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		1989BAF92591305A0014FF77 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		19C40FAC25923433004D763B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				1989BABC2590EB440014FF77 /* SearchViewController.swift */,
 				1989BAF92591305A0014FF77 /* ProductsViewController.swift */,
+				19C40FAC25923433004D763B /* ProductDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				1989BABD2590EB440014FF77 /* SearchViewController.swift in Sources */,
 				1989BAFA2591305A0014FF77 /* ProductsViewController.swift in Sources */,
+				19C40FAD25923433004D763B /* ProductDetailViewController.swift in Sources */,
 				1989BAD725910F120014FF77 /* ProductData.swift in Sources */,
 				1989BAB92590EB440014FF77 /* AppDelegate.swift in Sources */,
 				1989BABB2590EB440014FF77 /* SceneDelegate.swift in Sources */,

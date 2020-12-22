@@ -15,9 +15,6 @@ class ProductsViewController: UITableViewController {
         super.viewDidLoad()
 
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "Volver"
-        
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = UITableView.automaticDimension
 
         //Use light mode
         if #available(iOS 13.0, *){
@@ -25,7 +22,7 @@ class ProductsViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Methods
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -33,11 +30,11 @@ class ProductsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if products?.results.count == 0 {
-            return 1
-        } else {
-            return (products?.results.count)!
-        }
+            if products?.results.count == 0 {
+                return 1
+            } else {
+                return (products?.results.count)!
+            }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,13 +45,34 @@ class ProductsViewController: UITableViewController {
             cell.textLabel?.text = "No se encontraron resultados"
             cell.accessoryType = .none
         } else {
-            cell.textLabel?.text = products?.results[indexPath.row].title
+            
+            if let result = products?.results[indexPath.row] {
+                cell.textLabel?.text = result.title
+            }
         }
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if products?.results.count != 0 {
+            performSegue(withIdentifier: "goToProductDetail", sender: self)
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destinationVC = segue.destination as? ProductDetailViewController
+        {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                destinationVC.product = self.products?.results[indexPath.row]
+                
+            }
+        }
     }
 }
+
