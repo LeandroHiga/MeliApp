@@ -32,16 +32,25 @@ class ProductsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return products?.results.count ?? 0
+        
+        if products?.results.count == 0 {
+            return 1
+        } else {
+            return (products?.results.count)!
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
         
-        cell.textLabel?.text = products?.results[indexPath.row].title
-        
+        if products?.results.count == 0 {
+            cell.textLabel?.text = "No se encontraron resultados"
+            cell.accessoryType = .none
+        } else {
+            cell.textLabel?.text = products?.results[indexPath.row].title
+        }
+
         return cell
     }
     

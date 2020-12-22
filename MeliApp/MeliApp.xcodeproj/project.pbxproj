@@ -15,7 +15,6 @@
 		1989BAC52590EB480014FF77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1989BAC32590EB480014FF77 /* LaunchScreen.storyboard */; };
 		1989BAD425910C920014FF77 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD325910C920014FF77 /* ProductManager.swift */; };
 		1989BAD725910F120014FF77 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD625910F120014FF77 /* ProductData.swift */; };
-		1989BADA25910F3A0014FF77 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD925910F3A0014FF77 /* ProductModel.swift */; };
 		1989BAFA2591305A0014FF77 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAF92591305A0014FF77 /* ProductsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		1989BAC62590EB480014FF77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1989BAD325910C920014FF77 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		1989BAD625910F120014FF77 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
-		1989BAD925910F3A0014FF77 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		1989BAF92591305A0014FF77 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +87,6 @@
 			children = (
 				1989BAD325910C920014FF77 /* ProductManager.swift */,
 				1989BAD625910F120014FF77 /* ProductData.swift */,
-				1989BAD925910F3A0014FF77 /* ProductModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,7 +171,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1989BABD2590EB440014FF77 /* SearchViewController.swift in Sources */,
-				1989BADA25910F3A0014FF77 /* ProductModel.swift in Sources */,
 				1989BAFA2591305A0014FF77 /* ProductsViewController.swift in Sources */,
 				1989BAD725910F120014FF77 /* ProductData.swift in Sources */,
 				1989BAB92590EB440014FF77 /* AppDelegate.swift in Sources */,
