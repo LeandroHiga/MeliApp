@@ -10,12 +10,18 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
+    var productManager = ProductManager()
+    var products: ProductData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchButton.isEnabled = false
+        
         searchTextField.delegate = self
+        productManager.delegate = self
         
         //Use light mode
         if #available(iOS 13.0, *){
@@ -75,8 +81,16 @@ extension SearchViewController: UITextFieldDelegate {
         //Dismiss keyboard when search button is pressed
         searchTextField.endEditing(true)
         
-        if let safeSearchTextField = searchTextField.text {
-            print(safeSearchTextField)
+        if let product = searchTextField.text {
+            
+            let trimmedProduct = product.trimmingCharacters(in: .whitespacesAndNewlines)
+            let finalProduct = trimmedProduct.replacingOccurrences(of: " ", with: "%20")
+            
+            if finalProduct.isEmpty {
+                searchTextField.placeholder = "Ingrese producto..."
+            } else {
+                productManager.fetchProducts(productName: finalProduct)
+            }
         }
     }
     
@@ -88,7 +102,41 @@ extension SearchViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchButton.isEnabled = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if searchTextField.text == "" {
+            searchButton.isEnabled = false
+        }
+    }
+}
+
+//MARK: - ProductManagerDelegate
+
+extension SearchViewController: ProductManagerDelegate {
+    
+    func didUpdateProducts(_ productManager: ProductManager, products: ProductData) {
+
+        print("PRODUCTS: \(products)")
+
+        self.products = products
+
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "goToProducts", sender: self)
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destinationVC = segue.destination as? ProductsViewController
+        {
+            destinationVC.products = self.products
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }

@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct ProductModel {
+    
+    let titlee: String
+    let price: Double
+    let currency_id: String
+    let condition: String
+    let permalink: String
+    let thumbnail: String
+    
+}

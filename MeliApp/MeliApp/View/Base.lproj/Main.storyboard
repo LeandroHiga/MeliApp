@@ -64,12 +64,43 @@
                     </view>
                     <navigationItem key="navigationItem" title="Meli App" id="kiG-f8-0l6"/>
                     <connections>
+                        <outlet property="searchButton" destination="1wO-HL-r3y" id="7zA-Jx-9vj"/>
                         <outlet property="searchTextField" destination="ME3-f2-XFA" id="eY0-Ju-lVy"/>
+                        <segue destination="mIa-7d-cWe" kind="show" identifier="goToProducts" id="XtG-5Q-Vcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1026.0869565217392" y="99.776785714285708"/>
+        </scene>
+        <!--Resultados-->
+        <scene sceneID="IB6-up-luM">
+            <objects>
+                <tableViewController id="mIa-7d-cWe" customClass="ProductsViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7lG-nK-yc5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" id="RSb-kP-Phu">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSb-kP-Phu" id="zie-Ff-9Bo">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mIa-7d-cWe" id="yKd-cf-nWK"/>
+                            <outlet property="delegate" destination="mIa-7d-cWe" id="coJ-kG-WdR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Resultados" id="NLV-bf-L4G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aF-UD-X2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HrY-X1-9wj">
