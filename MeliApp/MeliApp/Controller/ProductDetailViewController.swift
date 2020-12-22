@@ -14,7 +14,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var conditionLabel: UILabel!
-    @IBOutlet weak var linkLabel: UILabel!
+    @IBOutlet weak var linkTextView: UITextView!
     
     var product: Results?
     
@@ -43,16 +43,35 @@ class ProductDetailViewController: UIViewController {
         }
         
         if let link = product?.permalink {
-            linkLabel.text = "Link: \(link)"
+            linkTextView.text = "Publicación: \(link)"
         }
         
-        // Create URL
         if let imageLink = product?.thumbnail {
             
             let imageURL = imageLink.replacingOccurrences(of: "http:", with: "https:")
             let finalImageURL = URL(string: imageURL)
             print(finalImageURL!)
+            
             self.imageView.downloadImage(from: finalImageURL!)
+        }
+        
+        updateTextView(text: linkTextView.text)
+        
+    }
+    
+    //Add hyperlink
+    func updateTextView(text: String) {
+        
+        if let url = product?.permalink {
+            
+            let productURL = URL(string: url)!
+            let attributedString = NSMutableAttributedString(string: text)
+            
+            attributedString.setAttributes([.link: productURL], range: NSMakeRange(13, (text as NSString).length - 13))
+            
+            self.linkTextView.attributedText = attributedString
+            self.linkTextView.isUserInteractionEnabled = true
+            self.linkTextView.isEditable = false
         }
     }
 }
@@ -60,12 +79,9 @@ class ProductDetailViewController: UIViewController {
 //MARK: - UIImageView
 
 extension UIImageView {
-   func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-      URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-   }
+
    func downloadImage(from url: URL) {
-      getData(from: url) {
-         data, response, error in
+      getData(from: url) { data, response, error in
          guard let data = data, error == nil else {
             return
          }
@@ -74,4 +90,8 @@ extension UIImageView {
          }
       }
    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+       URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
 }
