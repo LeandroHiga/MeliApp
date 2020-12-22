@@ -51,7 +51,7 @@ class ProductDetailViewController: UIViewController {
             
             let imageURL = imageLink.replacingOccurrences(of: "http:", with: "https:")
             let finalImageURL = URL(string: imageURL)
-            print("FINAL IMAGE URK: \(finalImageURL!)")
+            print(finalImageURL!)
             self.imageView.downloadImage(from: finalImageURL!)
         }
     }
