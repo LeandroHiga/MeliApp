@@ -272,7 +272,7 @@
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="99.776785714285708"/>
         </scene>
-        <!--Product Detail View Controller-->
+        <!--Detalle-->
         <scene sceneID="1XG-om-Wf1">
             <objects>
                 <viewController id="9sz-wa-iUZ" customClass="ProductDetailViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -346,14 +346,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ehx-Hq-Ume">
                                                         <rect key="frame" x="0.0" y="336" width="375" height="36"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ir a publicación" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ox-faK">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ir a publicación" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ox-faK">
                                                                 <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="36"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-36-IQU">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-36-IQU">
                                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="36"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <string key="text">Ir a
@@ -392,7 +392,7 @@ perfil del vendedor</string>
                             <constraint firstAttribute="bottom" secondItem="fTF-vE-cjs" secondAttribute="bottom" id="oOU-7u-1z3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="J3O-UL-vJq"/>
+                    <navigationItem key="navigationItem" title="Detalle" id="J3O-UL-vJq"/>
                     <connections>
                         <outlet property="availableQuantityLabel" destination="wDT-C6-48T" id="7Gi-d8-hnc"/>
                         <outlet property="cityLabel" destination="6vo-8m-G4f" id="8ca-bG-nv5"/>
