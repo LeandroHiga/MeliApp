@@ -140,6 +140,15 @@ extension SearchViewController: ProductManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
+        
         print(error)
+        
+        DispatchQueue.main.async {
+            
+            let alert = UIAlertController(title: "¡Oops! Error de conexión", message: "Revisa tu conexión para seguir buscando productos.", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
 }
