@@ -83,6 +83,8 @@ class ProductDetailViewController: UIViewController {
         }
         
         updateTextView(publication: publicationTextView.text, seller: sellerTextView.text)
+        publicationTextView.textAlignment = .center
+        sellerTextView.textAlignment = .center
     }
     
     //Add hyperlink -> redirect to publication
