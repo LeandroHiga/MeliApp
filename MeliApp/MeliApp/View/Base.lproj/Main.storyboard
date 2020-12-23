@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bN-lb-zoo">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="np4-vK-6pl">
-                                <rect key="frame" x="37.666666666666657" y="216" width="300" height="380"/>
+                                <rect key="frame" x="45" y="232" width="300" height="380"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3bv-NZ-KlC">
                                         <rect key="frame" x="25" y="0.0" width="250" height="350"/>
@@ -57,7 +57,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wO-HL-r3y">
-                                                <rect key="frame" x="271.66666666666663" y="0.0" width="28.333333333333314" height="30"/>
+                                                <rect key="frame" x="271.66666666666669" y="0.0" width="28.333333333333314" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" red="0.15686274509803921" green="0.19607843137254902" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="magnifyingglass" catalog="system">
@@ -123,15 +123,15 @@
             <objects>
                 <tableViewController id="mIa-7d-cWe" customClass="ProductsViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7lG-nK-yc5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProductCell" id="RSb-kP-Phu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSb-kP-Phu" id="zie-Ff-9Bo">
-                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="358.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -143,7 +143,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Resultados" id="NLV-bf-L4G"/>
                     <connections>
-                        <segue destination="OLz-rv-VQW" kind="show" identifier="goToProductDetail" id="YEj-Gg-yJP"/>
+                        <segue destination="9sz-wa-iUZ" kind="show" identifier="goToProductDetail" id="Wyx-qk-auy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aF-UD-X2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,45 +155,45 @@
             <objects>
                 <viewController id="OLz-rv-VQW" customClass="ProductDetailViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48r-oS-q2U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-3D-0rb">
-                                <rect key="frame" x="60" y="118" width="255" height="265"/>
+                                <rect key="frame" x="60" y="74" width="270" height="341"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RqQ-PO-UOI" userLabel="Labels Stack View">
-                                <rect key="frame" x="30" y="393" width="315" height="375"/>
+                                <rect key="frame" x="30" y="425" width="330" height="375"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Descripción: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-Ij-lUt">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Precio: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fb-d4-emr">
-                                        <rect key="frame" x="0.0" y="75" width="315" height="75"/>
+                                        <rect key="frame" x="0.0" y="75" width="330" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Moneda: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R0m-MA-PeH">
-                                        <rect key="frame" x="0.0" y="150" width="315" height="75"/>
+                                        <rect key="frame" x="0.0" y="150" width="330" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Condición: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-Of-uQH">
-                                        <rect key="frame" x="0.0" y="225" width="315" height="75"/>
+                                        <rect key="frame" x="0.0" y="225" width="330" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Publicación: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p48-fh-nNt">
-                                        <rect key="frame" x="0.0" y="300" width="315" height="75"/>
+                                        <rect key="frame" x="0.0" y="300" width="330" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="qWw-Lp-epA"/>
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsf-oQ-N1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="100"/>
+            <point key="canvasLocation" x="2846" y="-340"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HrY-X1-9wj">
@@ -247,7 +247,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4bN-lb-zoo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CnZ-Sa-56l">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.90196078431372551" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -262,6 +262,155 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLO-mj-kEv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="115.94202898550725" y="99.776785714285708"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="1XG-om-Wf1">
+            <objects>
+                <viewController id="9sz-wa-iUZ" customClass="ProductDetailViewController" customModule="MeliApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGV-5I-UA9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTF-vE-cjs">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-nM-21l">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1005"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wW6-Pa-yIp">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="275"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="275" id="BFI-Tu-y9S"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PXC-8b-RQI" userLabel="Labels Stack View">
+                                                <rect key="frame" x="0.0" y="285" width="390" height="720"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Descripción: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfw-ma-pqM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="k4T-52-Kaq"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Precio: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jvD-Fl-mtb">
+                                                        <rect key="frame" x="0.0" y="90" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Moneda: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-QW-67X">
+                                                        <rect key="frame" x="0.0" y="180" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Condición: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yMu-Ou-6Qs">
+                                                        <rect key="frame" x="0.0" y="270" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Cantidad disponible: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xg5-rk-psB">
+                                                        <rect key="frame" x="0.0" y="360" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Provincia: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-Rf-rQs">
+                                                        <rect key="frame" x="0.0" y="450" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ciudad: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zwP-fl-ciw">
+                                                        <rect key="frame" x="0.0" y="540" width="390" height="90"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ehx-Hq-Ume">
+                                                        <rect key="frame" x="0.0" y="630" width="390" height="90"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ox-faK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="195" height="90"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <string key="text">Ir a
+publicación</string>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-36-IQU">
+                                                                <rect key="frame" x="195" y="0.0" width="195" height="90"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <string key="text">Ir a
+perfil del vendedor</string>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="s7L-QW-67X" secondAttribute="trailing" id="FYC-pO-o83"/>
+                                                    <constraint firstItem="jvD-Fl-mtb" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="Fdi-WJ-V5t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jvD-Fl-mtb" secondAttribute="trailing" id="eXC-Ng-DQo"/>
+                                                    <constraint firstItem="s7L-QW-67X" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="gi6-Lz-dx2"/>
+                                                    <constraint firstItem="yMu-Ou-6Qs" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="iut-Pf-mYH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yMu-Ou-6Qs" secondAttribute="trailing" id="sSd-bv-8ID"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="leading" secondItem="wi4-YU-Dgc" secondAttribute="leading" id="7rf-YK-lpj"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="trailing" secondItem="wi4-YU-Dgc" secondAttribute="trailing" id="8N5-S6-dZs"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="width" secondItem="pch-cn-Lcj" secondAttribute="width" id="jT5-6o-W0l"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="bottom" secondItem="wi4-YU-Dgc" secondAttribute="bottom" id="luA-Tl-t5G"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="top" secondItem="wi4-YU-Dgc" secondAttribute="top" id="obo-bp-K15"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wi4-YU-Dgc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pch-cn-Lcj"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QsK-mk-IpS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fTF-vE-cjs" firstAttribute="top" secondItem="zGV-5I-UA9" secondAttribute="top" id="3GV-fQ-I1N"/>
+                            <constraint firstItem="fTF-vE-cjs" firstAttribute="leading" secondItem="QsK-mk-IpS" secondAttribute="leading" id="POW-Fl-ckS"/>
+                            <constraint firstAttribute="trailing" secondItem="fTF-vE-cjs" secondAttribute="trailing" id="a9m-do-sMs"/>
+                            <constraint firstAttribute="bottom" secondItem="fTF-vE-cjs" secondAttribute="bottom" id="oOU-7u-1z3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J3O-UL-vJq"/>
+                    <connections>
+                        <outlet property="availableQuantityTextView" destination="xg5-rk-psB" id="GLn-Dg-J7l"/>
+                        <outlet property="cityTextView" destination="zwP-fl-ciw" id="yi8-m8-RwI"/>
+                        <outlet property="conditionTextView" destination="yMu-Ou-6Qs" id="3Hc-4V-eSP"/>
+                        <outlet property="currencyTextView" destination="s7L-QW-67X" id="wkS-BR-1jD"/>
+                        <outlet property="descriptionTextView" destination="vfw-ma-pqM" id="rwQ-xm-4vw"/>
+                        <outlet property="imageView" destination="wW6-Pa-yIp" id="tiJ-LP-4hq"/>
+                        <outlet property="priceTextView" destination="jvD-Fl-mtb" id="b3d-60-LR2"/>
+                        <outlet property="publicationTextView" destination="KOO-Ox-faK" id="fVX-9N-o8W"/>
+                        <outlet property="sellerTextView" destination="0Ub-36-IQU" id="qiy-eT-wNF"/>
+                        <outlet property="stateTextView" destination="FP2-Rf-rQs" id="Ex0-El-Wvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CG9-Kf-3cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2845" y="377"/>
         </scene>
     </scenes>
     <resources>
