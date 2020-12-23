@@ -65,5 +65,4 @@ struct ProductManager {
             return nil
         }
     }
-    
 }

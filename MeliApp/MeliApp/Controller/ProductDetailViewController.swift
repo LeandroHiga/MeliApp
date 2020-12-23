@@ -16,6 +16,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var linkTextView: UITextView!
     
+    //Product selected from previous screen
     var product: Results?
     
     override func viewDidLoad() {
@@ -48,18 +49,17 @@ class ProductDetailViewController: UIViewController {
         
         if let imageLink = product?.thumbnail {
             
+            //Use https to secure connection
             let imageURL = imageLink.replacingOccurrences(of: "http:", with: "https:")
             let finalImageURL = URL(string: imageURL)
-            print(finalImageURL!)
             
             self.imageView.downloadImage(from: finalImageURL!)
         }
         
         updateTextView(text: linkTextView.text)
-        
     }
     
-    //Add hyperlink
+    //Add hyperlink -> redirect to publication
     func updateTextView(text: String) {
         
         if let url = product?.permalink {
@@ -76,7 +76,7 @@ class ProductDetailViewController: UIViewController {
     }
 }
 
-//MARK: - UIImageView
+//MARK: - UIImageView - Fetch image
 
 extension UIImageView {
 

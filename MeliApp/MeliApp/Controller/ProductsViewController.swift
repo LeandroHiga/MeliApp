@@ -65,6 +65,7 @@ class ProductsViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        //Pass data of the selected product (row) to next view controller (ProductDetailViewController)
         if let destinationVC = segue.destination as? ProductDetailViewController
         {
             

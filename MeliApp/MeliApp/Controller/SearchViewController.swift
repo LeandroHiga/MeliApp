@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         searchButton.isEnabled = false
         
+        //Delegates
         searchTextField.delegate = self
         productManager.delegate = self
         
@@ -29,7 +30,7 @@ class SearchViewController: UIViewController {
             overrideUserInterfaceStyle = .light
         }
         
-        //Move keyboard up when open
+        //Move keyboard up when its opened
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -38,10 +39,12 @@ class SearchViewController: UIViewController {
         view.addGestureRecognizer(tap)
    
         //Add done button to keyboard toolbar
-        setupTextFields()
+        setupKeyboardButton()
     }
     
-    func setupTextFields() {
+    //MARK: - Keyboard Methods
+
+    func setupKeyboardButton() {
         let toolbar = UIToolbar()
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
@@ -71,8 +74,6 @@ class SearchViewController: UIViewController {
     }
 }
 
-
-
 //MARK: - UITextFieldDelegate
 
 extension SearchViewController: UITextFieldDelegate {
@@ -84,8 +85,8 @@ extension SearchViewController: UITextFieldDelegate {
         
         if let product = searchTextField.text {
             
-            let trimmedProduct = product.trimmingCharacters(in: .whitespacesAndNewlines)
-            let finalProduct = trimmedProduct.replacingOccurrences(of: " ", with: "%20")
+            let trimmedProduct = product.trimmingCharacters(in: .whitespacesAndNewlines) //Remove leading and trailing whitespaces
+            let finalProduct = trimmedProduct.replacingOccurrences(of: " ", with: "%20") //Replace whitespaces between words
             
             if finalProduct.isEmpty {
                 searchTextField.placeholder = "Ingrese producto..."
@@ -131,6 +132,7 @@ extension SearchViewController: ProductManagerDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        //Pass fetched products to next view controller (ProductsViewController)
         if let destinationVC = segue.destination as? ProductsViewController
         {
             destinationVC.products = self.products
