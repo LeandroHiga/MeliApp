@@ -9,16 +9,25 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
+    
+//    @IBOutlet weak var descriptionTextView: UITextView!
+//    @IBOutlet weak var priceTextView: UITextView!
+//    @IBOutlet weak var currencyTextView: UITextView!
+//    @IBOutlet weak var conditionTextView: UITextView!
+//    @IBOutlet weak var availableQuantityTextView: UITextView!
+//    @IBOutlet weak var stateTextView: UITextView!
+//    @IBOutlet weak var cityTextView: UITextView!
+
+
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var priceTextView: UITextView!
-    @IBOutlet weak var currencyTextView: UITextView!
-    @IBOutlet weak var conditionTextView: UITextView!
-    @IBOutlet weak var availableQuantityTextView: UITextView!
-    @IBOutlet weak var stateTextView: UITextView!
-    @IBOutlet weak var cityTextView: UITextView!
-//    @IBOutlet weak var sellerTextView: UITextView!
-//    @IBOutlet weak var publicationTextView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var availableQuantityLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
     @IBOutlet weak var publicationTextView: UITextView!
     @IBOutlet weak var sellerTextView: UITextView!
     
@@ -34,40 +43,35 @@ class ProductDetailViewController: UIViewController {
         }
         
         if let title = product?.title {
-            descriptionTextView.text = "\(title)"
+            descriptionLabel.text = "\(title)"
         }
         
         if let price = product?.price {
-            priceTextView.text = "Precio: \(String(price))"
+            priceLabel.text = "Precio: \(String(price))"
         }
         
         if let currency = product?.currency_id {
-            currencyTextView.text = "Moneda: \(currency)"
+            currencyLabel.text = "Moneda: \(currency)"
         }
         
         if let condition = product?.condition {
-            conditionTextView.text = "Condición: \(condition)"
+            conditionLabel.text = "Condición: \(condition)"
         }
         
         if let quantity = product?.available_quantity {
-            availableQuantityTextView.text = "Cantidad disponible: \(quantity)"
+            availableQuantityLabel.text = "Cantidad disponible: \(quantity)"
         }
         
         if let state = product?.address.state_name {
-            stateTextView.text = "Provincia: \(state)"
+            stateLabel.text = "Provincia: \(state)"
         }
         
         if let city = product?.address.city_name {
-            cityTextView.text = "Ciudad: \(city)"
+            cityLabel.text = "Ciudad: \(city)"
         }
-        
-//        if let seller = product?.seller.permalink {
-//            sellerTextView.text = "Vendedor: \(seller)"
-//        }
-//        
-//        if let publication = product?.permalink {
-//            publicationTextView.text = "Publicación: \(publication)"
-//        }
+
+        publicationTextView.sizeToFit()
+        sellerTextView.sizeToFit()
         
         if let imageLink = product?.thumbnail {
             

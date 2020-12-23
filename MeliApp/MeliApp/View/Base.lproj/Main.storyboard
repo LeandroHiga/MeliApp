@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsf-oQ-N1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2846" y="-340"/>
+            <point key="canvasLocation" x="2849" y="-574"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HrY-X1-9wj">
@@ -275,108 +275,92 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-nM-21l">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1005"/>
+                                        <rect key="frame" x="5" y="0.0" width="390" height="823"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiR-Fz-t6X">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFe-2l-eUQ">
+                                                <rect key="frame" x="0.0" y="34" width="390" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wW6-Pa-yIp">
-                                                <rect key="frame" x="0.0" y="0.0" width="390" height="275"/>
+                                                <rect key="frame" x="0.0" y="68" width="390" height="275"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="275" id="BFI-Tu-y9S"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PXC-8b-RQI" userLabel="Labels Stack View">
-                                                <rect key="frame" x="0.0" y="285" width="390" height="720"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PXC-8b-RQI" userLabel="Labels Stack View">
+                                                <rect key="frame" x="0.0" y="353" width="390" height="470"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Descripción: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfw-ma-pqM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="90" id="k4T-52-Kaq"/>
-                                                        </constraints>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Precio: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jvD-Fl-mtb">
-                                                        <rect key="frame" x="0.0" y="90" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FZ-rj-Ew8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Moneda: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-QW-67X">
-                                                        <rect key="frame" x="0.0" y="180" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moneda" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiY-GZ-MpC">
+                                                        <rect key="frame" x="0.0" y="70" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Condición: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yMu-Ou-6Qs">
-                                                        <rect key="frame" x="0.0" y="270" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condición" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ub-L3-UlJ">
+                                                        <rect key="frame" x="0.0" y="140" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Cantidad disponible: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xg5-rk-psB">
-                                                        <rect key="frame" x="0.0" y="360" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad disponible" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDT-C6-48T">
+                                                        <rect key="frame" x="0.0" y="210" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Provincia: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-Rf-rQs">
-                                                        <rect key="frame" x="0.0" y="450" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provincia" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-KR-55D">
+                                                        <rect key="frame" x="0.0" y="280" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ciudad: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zwP-fl-ciw">
-                                                        <rect key="frame" x="0.0" y="540" width="390" height="90"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vo-8m-G4f">
+                                                        <rect key="frame" x="0.0" y="350" width="390" height="50"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ehx-Hq-Ume">
-                                                        <rect key="frame" x="0.0" y="630" width="390" height="90"/>
+                                                        <rect key="frame" x="0.0" y="420" width="390" height="50"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ox-faK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="195" height="90"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ir a publicación" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-Ox-faK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <string key="text">Ir a
-publicación</string>
                                                                 <color key="textColor" systemColor="labelColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-36-IQU">
-                                                                <rect key="frame" x="195" y="0.0" width="195" height="90"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ir a perfil del vendedor" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Ub-36-IQU">
+                                                                <rect key="frame" x="195" y="0.0" width="195" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <string key="text">Ir a
-perfil del vendedor</string>
                                                                 <color key="textColor" systemColor="labelColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="s7L-QW-67X" secondAttribute="trailing" id="FYC-pO-o83"/>
-                                                    <constraint firstItem="jvD-Fl-mtb" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="Fdi-WJ-V5t"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jvD-Fl-mtb" secondAttribute="trailing" id="eXC-Ng-DQo"/>
-                                                    <constraint firstItem="s7L-QW-67X" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="gi6-Lz-dx2"/>
-                                                    <constraint firstItem="yMu-Ou-6Qs" firstAttribute="leading" secondItem="PXC-8b-RQI" secondAttribute="leading" id="iut-Pf-mYH"/>
-                                                    <constraint firstAttribute="trailing" secondItem="yMu-Ou-6Qs" secondAttribute="trailing" id="sSd-bv-8ID"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4aR-nM-21l" firstAttribute="leading" secondItem="wi4-YU-Dgc" secondAttribute="leading" id="7rf-YK-lpj"/>
-                                    <constraint firstItem="4aR-nM-21l" firstAttribute="trailing" secondItem="wi4-YU-Dgc" secondAttribute="trailing" id="8N5-S6-dZs"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="leading" secondItem="wi4-YU-Dgc" secondAttribute="leading" constant="5" id="7rf-YK-lpj"/>
+                                    <constraint firstItem="4aR-nM-21l" firstAttribute="trailing" secondItem="wi4-YU-Dgc" secondAttribute="trailing" constant="5" id="8N5-S6-dZs"/>
                                     <constraint firstItem="4aR-nM-21l" firstAttribute="width" secondItem="pch-cn-Lcj" secondAttribute="width" id="jT5-6o-W0l"/>
                                     <constraint firstItem="4aR-nM-21l" firstAttribute="bottom" secondItem="wi4-YU-Dgc" secondAttribute="bottom" id="luA-Tl-t5G"/>
                                     <constraint firstItem="4aR-nM-21l" firstAttribute="top" secondItem="wi4-YU-Dgc" secondAttribute="top" id="obo-bp-K15"/>
@@ -396,21 +380,21 @@ perfil del vendedor</string>
                     </view>
                     <navigationItem key="navigationItem" id="J3O-UL-vJq"/>
                     <connections>
-                        <outlet property="availableQuantityTextView" destination="xg5-rk-psB" id="GLn-Dg-J7l"/>
-                        <outlet property="cityTextView" destination="zwP-fl-ciw" id="yi8-m8-RwI"/>
-                        <outlet property="conditionTextView" destination="yMu-Ou-6Qs" id="3Hc-4V-eSP"/>
-                        <outlet property="currencyTextView" destination="s7L-QW-67X" id="wkS-BR-1jD"/>
-                        <outlet property="descriptionTextView" destination="vfw-ma-pqM" id="rwQ-xm-4vw"/>
+                        <outlet property="availableQuantityLabel" destination="wDT-C6-48T" id="7Gi-d8-hnc"/>
+                        <outlet property="cityLabel" destination="6vo-8m-G4f" id="8ca-bG-nv5"/>
+                        <outlet property="conditionLabel" destination="9ub-L3-UlJ" id="Xa7-Sm-g1t"/>
+                        <outlet property="currencyLabel" destination="PiY-GZ-MpC" id="74r-eM-Vtg"/>
+                        <outlet property="descriptionLabel" destination="bFe-2l-eUQ" id="lHT-uv-HX9"/>
                         <outlet property="imageView" destination="wW6-Pa-yIp" id="tiJ-LP-4hq"/>
-                        <outlet property="priceTextView" destination="jvD-Fl-mtb" id="b3d-60-LR2"/>
+                        <outlet property="priceLabel" destination="1FZ-rj-Ew8" id="7fF-Mz-UcL"/>
                         <outlet property="publicationTextView" destination="KOO-Ox-faK" id="fVX-9N-o8W"/>
                         <outlet property="sellerTextView" destination="0Ub-36-IQU" id="qiy-eT-wNF"/>
-                        <outlet property="stateTextView" destination="FP2-Rf-rQs" id="Ex0-El-Wvs"/>
+                        <outlet property="stateLabel" destination="hPb-KR-55D" id="jDY-G2-27A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CG9-Kf-3cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845" y="377"/>
+            <point key="canvasLocation" x="2817" y="100"/>
         </scene>
     </scenes>
     <resources>
