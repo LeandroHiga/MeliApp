@@ -88,18 +88,6 @@ class ProductDetailViewController: UIViewController {
     //Add hyperlink -> redirect to publication
     func updateTextView(publication: String, seller: String) {
         
-//        if let url = product?.permalink {
-//
-//            let productURL = URL(string: url)!
-//            let attributedString = NSMutableAttributedString(string: text)
-//
-//            attributedString.setAttributes([.link: productURL], range: NSMakeRange(13, (text as NSString).length - 13))
-//
-//            self.publicationTextView.attributedText = attributedString
-//            self.publicationTextView.isUserInteractionEnabled = true
-//            self.publicationTextView.isEditable = false
-//        }
-        
         if let safeSeller = product?.seller.permalink, let safePublication = product?.permalink {
             
             let publicationAttributedString = NSMutableAttributedString(string: publication)

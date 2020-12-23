@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197484232593D61F005A1BF4 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1974841F2593D61E005A1BF4 /* Lato-Black.ttf */; };
+		197484242593D61F005A1BF4 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197484202593D61E005A1BF4 /* Lato-Bold.ttf */; };
+		197484252593D61F005A1BF4 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197484212593D61F005A1BF4 /* Lato-Regular.ttf */; };
+		197484262593D61F005A1BF4 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197484222593D61F005A1BF4 /* Lato-Light.ttf */; };
 		1989BAB92590EB440014FF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAB82590EB440014FF77 /* AppDelegate.swift */; };
 		1989BABB2590EB440014FF77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BABA2590EB440014FF77 /* SceneDelegate.swift */; };
 		1989BABD2590EB440014FF77 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BABC2590EB440014FF77 /* SearchViewController.swift */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1974841F2593D61E005A1BF4 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		197484202593D61E005A1BF4 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		197484212593D61F005A1BF4 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		197484222593D61F005A1BF4 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		1989BAB52590EB440014FF77 /* MeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1989BAB82590EB440014FF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1989BABA2590EB440014FF77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		197484082593D480005A1BF4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1974841F2593D61E005A1BF4 /* Lato-Black.ttf */,
+				197484202593D61E005A1BF4 /* Lato-Bold.ttf */,
+				197484222593D61F005A1BF4 /* Lato-Light.ttf */,
+				197484212593D61F005A1BF4 /* Lato-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		1989BAAC2590EB440014FF77 = {
 			isa = PBXGroup;
 			children = (
 				1989BAB72590EB440014FF77 /* MeliApp */,
+				197484082593D480005A1BF4 /* Font */,
 				1989BAB62590EB440014FF77 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,9 +180,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197484232593D61F005A1BF4 /* Lato-Black.ttf in Resources */,
+				197484252593D61F005A1BF4 /* Lato-Regular.ttf in Resources */,
+				197484242593D61F005A1BF4 /* Lato-Bold.ttf in Resources */,
 				1989BAC52590EB480014FF77 /* LaunchScreen.storyboard in Resources */,
 				1989BAC22590EB480014FF77 /* Assets.xcassets in Resources */,
 				1989BAC02590EB440014FF77 /* Main.storyboard in Resources */,
+				197484262593D61F005A1BF4 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
