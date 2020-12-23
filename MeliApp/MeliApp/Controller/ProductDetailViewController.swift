@@ -10,10 +10,10 @@ import UIKit
 class ProductDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var currencyLabel: UILabel!
-    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var priceTextView: UITextView!
+    @IBOutlet weak var currencyTextView: UITextView!
+    @IBOutlet weak var conditionTextView: UITextView!
     @IBOutlet weak var linkTextView: UITextView!
     
     //Product selected from previous screen
@@ -28,19 +28,19 @@ class ProductDetailViewController: UIViewController {
         }
         
         if let title = product?.title {
-            titleLabel.text = "Título: \(title)"
+            titleTextView.text = "\(title)"
         }
         
         if let price = product?.price {
-            priceLabel.text = "Precio: \(String(price))"
+            priceTextView.text = "Precio: \(String(price))"
         }
         
         if let currency = product?.currency_id {
-            currencyLabel.text = "Moneda: \(currency)"
+            currencyTextView.text = "Moneda: \(currency)"
         }
         
         if let condition = product?.condition {
-            conditionLabel.text = "Condición: \(condition)"
+            conditionTextView.text = "Condición: \(condition)"
         }
         
         if let link = product?.permalink {

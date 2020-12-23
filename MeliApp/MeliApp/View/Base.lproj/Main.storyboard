@@ -158,69 +158,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CuU-nP-II6" userLabel="Labels Stack View">
-                                <rect key="frame" x="30" y="516" width="315" height="262"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-3D-0rb">
+                                <rect key="frame" x="60" y="118" width="255" height="265"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RqQ-PO-UOI" userLabel="Labels Stack View">
+                                <rect key="frame" x="30" y="393" width="315" height="375"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgE-wO-4os">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuS-Z5-cgl">
-                                        <rect key="frame" x="0.0" y="53" width="315" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moneda: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvV-7c-aJa">
-                                        <rect key="frame" x="0.0" y="106" width="315" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condición: " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DJ-pf-Q95">
-                                        <rect key="frame" x="0.0" y="159" width="315" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Publicación: " translatesAutoresizingMaskIntoConstraints="NO" id="Owg-7q-gk4">
-                                        <rect key="frame" x="0.0" y="212" width="315" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Descripción: " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-Ij-lUt">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Precio: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7fb-d4-emr">
+                                        <rect key="frame" x="0.0" y="75" width="315" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Moneda: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="R0m-MA-PeH">
+                                        <rect key="frame" x="0.0" y="150" width="315" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Condición: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4bd-Of-uQH">
+                                        <rect key="frame" x="0.0" y="225" width="315" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Publicación: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="p48-fh-nNt">
+                                        <rect key="frame" x="0.0" y="300" width="315" height="75"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="e2W-OX-8jx"/>
+                                            <constraint firstAttribute="height" constant="75" id="qWw-Lp-epA"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="R0m-MA-PeH" secondAttribute="trailing" id="5Ar-0q-r51"/>
+                                    <constraint firstAttribute="trailing" secondItem="7fb-d4-emr" secondAttribute="trailing" id="DTP-cD-LhG"/>
+                                    <constraint firstAttribute="trailing" secondItem="p48-fh-nNt" secondAttribute="trailing" id="J21-Sr-Zgw"/>
+                                    <constraint firstItem="4bd-Of-uQH" firstAttribute="leading" secondItem="RqQ-PO-UOI" secondAttribute="leading" id="Qm2-KT-k9u"/>
+                                    <constraint firstItem="R0m-MA-PeH" firstAttribute="leading" secondItem="RqQ-PO-UOI" secondAttribute="leading" id="hvj-Ek-k4r"/>
+                                    <constraint firstItem="7fb-d4-emr" firstAttribute="leading" secondItem="RqQ-PO-UOI" secondAttribute="leading" id="i5P-b9-iUs"/>
+                                    <constraint firstAttribute="trailing" secondItem="4bd-Of-uQH" secondAttribute="trailing" id="t84-5T-OwN"/>
+                                    <constraint firstItem="p48-fh-nNt" firstAttribute="leading" secondItem="RqQ-PO-UOI" secondAttribute="leading" id="z8n-yt-9vm"/>
+                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMW-3D-0rb">
-                                <rect key="frame" x="60" y="118" width="255" height="338"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oeH-9r-OSG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oeH-9r-OSG" firstAttribute="bottom" secondItem="CuU-nP-II6" secondAttribute="bottom" id="5JJ-8y-anj"/>
                             <constraint firstItem="oeH-9r-OSG" firstAttribute="trailing" secondItem="KMW-3D-0rb" secondAttribute="trailing" constant="60" id="Iee-5O-yk0"/>
-                            <constraint firstItem="CuU-nP-II6" firstAttribute="top" secondItem="KMW-3D-0rb" secondAttribute="bottom" constant="60" id="TsU-3x-fhu"/>
+                            <constraint firstItem="RqQ-PO-UOI" firstAttribute="top" secondItem="KMW-3D-0rb" secondAttribute="bottom" constant="10" id="Qgw-Jj-5mp"/>
+                            <constraint firstItem="RqQ-PO-UOI" firstAttribute="leading" secondItem="oeH-9r-OSG" secondAttribute="leading" constant="30" id="Ttd-Am-nFa"/>
                             <constraint firstItem="KMW-3D-0rb" firstAttribute="leading" secondItem="oeH-9r-OSG" secondAttribute="leading" constant="60" id="Una-lu-lyi"/>
-                            <constraint firstItem="oeH-9r-OSG" firstAttribute="trailing" secondItem="CuU-nP-II6" secondAttribute="trailing" constant="30" id="jBO-N1-cMt"/>
+                            <constraint firstItem="oeH-9r-OSG" firstAttribute="bottom" secondItem="RqQ-PO-UOI" secondAttribute="bottom" constant="10" id="kur-XY-f0P"/>
+                            <constraint firstItem="RqQ-PO-UOI" firstAttribute="centerX" secondItem="48r-oS-q2U" secondAttribute="centerX" id="mtN-XG-3GX"/>
                             <constraint firstItem="KMW-3D-0rb" firstAttribute="top" secondItem="oeH-9r-OSG" secondAttribute="top" constant="30" id="tVq-9x-Syx"/>
-                            <constraint firstItem="CuU-nP-II6" firstAttribute="leading" secondItem="oeH-9r-OSG" secondAttribute="leading" constant="30" id="whY-5n-IIc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mx5-kf-N4l"/>
                     <connections>
-                        <outlet property="conditionLabel" destination="0DJ-pf-Q95" id="KKj-Be-Bbc"/>
-                        <outlet property="currencyLabel" destination="yvV-7c-aJa" id="4je-QM-mVv"/>
+                        <outlet property="conditionTextView" destination="4bd-Of-uQH" id="MNR-3j-clC"/>
+                        <outlet property="currencyTextView" destination="R0m-MA-PeH" id="r3H-cX-xhZ"/>
                         <outlet property="imageView" destination="KMW-3D-0rb" id="45I-62-bi3"/>
-                        <outlet property="linkTextView" destination="Owg-7q-gk4" id="cj1-5S-mC4"/>
-                        <outlet property="priceLabel" destination="WuS-Z5-cgl" id="5er-Pb-Kkl"/>
-                        <outlet property="titleLabel" destination="SgE-wO-4os" id="hF0-ct-uOA"/>
+                        <outlet property="linkTextView" destination="p48-fh-nNt" id="TZR-yo-cmP"/>
+                        <outlet property="priceTextView" destination="7fb-d4-emr" id="8OS-MD-76V"/>
+                        <outlet property="titleTextView" destination="Yeo-Ij-lUt" id="oRl-ec-rjN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsf-oQ-N1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
