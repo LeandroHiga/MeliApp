@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SearchViewController: UIViewController {
 
@@ -85,6 +86,8 @@ extension SearchViewController: UITextFieldDelegate {
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         
+        SVProgressHUD.show(withStatus: "Cargando...")
+        
         //Dismiss keyboard when search button is pressed
         searchTextField.endEditing(true)
         
@@ -146,14 +149,15 @@ extension SearchViewController: ProductManagerDelegate {
     
     func didFailWithError(error: Error) {
         
-        print(error)
+        print("ERROR: \(error)")
         
         DispatchQueue.main.async {
             
-            let alert = UIAlertController(title: "¡Oops! Error de conexión", message: "Revisa tu conexión para seguir buscando productos.", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
+//            let alert = UIAlertController(title: "¡Oops! Error de conexión", message: "Por favor, intente nuevamente más tarde", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//            self.present(alert, animated: true)
+            
+            SVProgressHUD.showError(withStatus: "¡Oops! Error de conexión. Por favor intente nuevamente más tarde.")
         }
     }
 }

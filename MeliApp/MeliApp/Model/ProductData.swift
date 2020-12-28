@@ -14,24 +14,24 @@ struct ProductData: Codable {
 
 struct Results: Codable {
     
-    let title: String
-    let price: Double
-    let currency_id: String
-    let condition: String
-    let permalink: String
-    let thumbnail: String
-    let available_quantity: Int
-    let seller: Seller
-    let address: Address
+    let title: String?
+    let price: Double?
+    let currency_id: String?
+    let condition: String?
+    let permalink: String?
+    let thumbnail: String?
+    let available_quantity: Int?
+    let seller: Seller?
+    let address: Address?
     
 }
 
 struct Address: Codable {
-    let state_name: String
-    let city_name: String
+    let state_name: String?
+    let city_name: String?
 }
 
 struct Seller: Codable {
-    let id: Int
-    let permalink: String
+    let id: Int?
+    let permalink: String?
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 protocol ProductManagerDelegate {
     func didUpdateProducts(_ productManager: ProductManager, products: ProductData)
@@ -46,6 +47,7 @@ struct ProductManager {
                 }
             }
             
+            SVProgressHUD.dismiss()
             //4. Start the task
             task.resume()
         }

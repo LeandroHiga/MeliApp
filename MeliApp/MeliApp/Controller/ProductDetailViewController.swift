@@ -62,11 +62,11 @@ class ProductDetailViewController: UIViewController {
             availableQuantityLabel.text = "Cantidad disponible: \(quantity)"
         }
         
-        if let state = product?.address.state_name {
+        if let state = product?.address?.state_name {
             stateLabel.text = "Provincia: \(state)"
         }
         
-        if let city = product?.address.city_name {
+        if let city = product?.address?.city_name {
             cityLabel.text = "Ciudad: \(city)"
         }
 
@@ -90,7 +90,7 @@ class ProductDetailViewController: UIViewController {
     //Add hyperlink -> redirect to publication
     func updateTextView(publication: String, seller: String) {
         
-        if let safeSeller = product?.seller.permalink, let safePublication = product?.permalink {
+        if let safeSeller = product?.seller?.permalink, let safePublication = product?.permalink {
             
             let publicationAttributedString = NSMutableAttributedString(string: publication)
             let sellerAttributedString = NSMutableAttributedString(string: seller)

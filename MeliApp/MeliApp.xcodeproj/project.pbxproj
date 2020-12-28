@@ -21,6 +21,7 @@
 		1989BAD725910F120014FF77 /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAD625910F120014FF77 /* ProductData.swift */; };
 		1989BAFA2591305A0014FF77 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989BAF92591305A0014FF77 /* ProductsViewController.swift */; };
 		19C40FAD25923433004D763B /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C40FAC25923433004D763B /* ProductDetailViewController.swift */; };
+		C79BAD9F75F4E88BC22B92E2 /* Pods_MeliApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C9B3824C36048B0EE1D09D /* Pods_MeliApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		1989BAD625910F120014FF77 /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		1989BAF92591305A0014FF77 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		19C40FAC25923433004D763B /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		2D942776F8EC07D8C6B8AFB5 /* Pods-MeliApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp.release.xcconfig"; path = "Target Support Files/Pods-MeliApp/Pods-MeliApp.release.xcconfig"; sourceTree = "<group>"; };
+		78C9B3824C36048B0EE1D09D /* Pods_MeliApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42C26C2455E9D1736FAC212 /* Pods-MeliApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliApp/Pods-MeliApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +51,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79BAD9F75F4E88BC22B92E2 /* Pods_MeliApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0770430051068DDD869827A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C9B3824C36048B0EE1D09D /* Pods_MeliApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		197484082593D480005A1BF4 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,8 @@
 				1989BAB72590EB440014FF77 /* MeliApp */,
 				197484082593D480005A1BF4 /* Font */,
 				1989BAB62590EB440014FF77 /* Products */,
+				99E3521BDA8CE690603E53A0 /* Pods */,
+				0770430051068DDD869827A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +138,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		99E3521BDA8CE690603E53A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F42C26C2455E9D1736FAC212 /* Pods-MeliApp.debug.xcconfig */,
+				2D942776F8EC07D8C6B8AFB5 /* Pods-MeliApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1989BAC92590EB480014FF77 /* Build configuration list for PBXNativeTarget "MeliApp" */;
 			buildPhases = (
+				B056DE6BF5BB1FB40675D7D2 /* [CP] Check Pods Manifest.lock */,
 				1989BAB12590EB440014FF77 /* Sources */,
 				1989BAB22590EB440014FF77 /* Frameworks */,
 				1989BAB32590EB440014FF77 /* Resources */,
+				8D2337E9F1939463EB9B5450 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +218,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D2337E9F1939463EB9B5450 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B056DE6BF5BB1FB40675D7D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeliApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1989BAB12590EB440014FF77 /* Sources */ = {
@@ -347,6 +416,7 @@
 		};
 		1989BACA2590EB480014FF77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F42C26C2455E9D1736FAC212 /* Pods-MeliApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +436,7 @@
 		};
 		1989BACB2590EB480014FF77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D942776F8EC07D8C6B8AFB5 /* Pods-MeliApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
