@@ -30,6 +30,13 @@ class SearchViewController: UIViewController {
             overrideUserInterfaceStyle = .light
         }
         
+        configureKeyboard()
+    }
+    
+    //MARK: - Keyboard Methods
+    
+    func configureKeyboard() {
+        
         //Move keyboard up when its opened
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -42,8 +49,6 @@ class SearchViewController: UIViewController {
         setupKeyboardButton()
     }
     
-    //MARK: - Keyboard Methods
-
     func setupKeyboardButton() {
         let toolbar = UIToolbar()
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
