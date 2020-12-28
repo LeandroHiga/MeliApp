@@ -6,18 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductDetailViewController: UIViewController {
-
-    
-//    @IBOutlet weak var descriptionTextView: UITextView!
-//    @IBOutlet weak var priceTextView: UITextView!
-//    @IBOutlet weak var currencyTextView: UITextView!
-//    @IBOutlet weak var conditionTextView: UITextView!
-//    @IBOutlet weak var availableQuantityTextView: UITextView!
-//    @IBOutlet weak var stateTextView: UITextView!
-//    @IBOutlet weak var cityTextView: UITextView!
-
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -79,7 +70,7 @@ class ProductDetailViewController: UIViewController {
             let imageURL = imageLink.replacingOccurrences(of: "http:", with: "https:")
             let finalImageURL = URL(string: imageURL)
             
-            self.imageView.downloadImage(from: finalImageURL!)
+            imageView.sd_setImage(with: finalImageURL, placeholderImage: UIImage(systemName: "photo"), options: .continueInBackground, completed: nil)
         }
         
         updateTextView(publication: publicationTextView.text, seller: sellerTextView.text)
@@ -106,25 +97,5 @@ class ProductDetailViewController: UIViewController {
             self.sellerTextView.isUserInteractionEnabled = true
             self.sellerTextView.isEditable = false
         }
-    }
-}
-
-//MARK: - UIImageView - Fetch image
-
-extension UIImageView {
-
-   func downloadImage(from url: URL) {
-      getData(from: url) { data, response, error in
-         guard let data = data, error == nil else {
-            return
-         }
-         DispatchQueue.main.async() {
-            self.image = UIImage(data: data)
-         }
-      }
-   }
-    
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-       URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }
