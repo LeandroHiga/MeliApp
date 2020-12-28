@@ -33,21 +33,26 @@ struct ProductManager {
             
             //3.Give the session a task
             let task = session.dataTask(with: url) { (data, response, error) in
+                
                 //Check if there is an error
                 if error != nil {
                     self.delegate?.didFailWithError(error: error!)
-                    //If there is an error, exit out of the function
                     return
                 }
+                
                 //Check if data is nil
                 if let safeData = data {
                     if let products = self.parseJSON(safeData) {
                         self.delegate?.didUpdateProducts(self, products: products)
                     }
+                } else {
+                    self.delegate?.didFailWithError(error: error!)
+                    return
                 }
+                
+                SVProgressHUD.dismiss()
             }
             
-            SVProgressHUD.dismiss()
             //4. Start the task
             task.resume()
         }
