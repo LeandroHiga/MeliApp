@@ -23,15 +23,16 @@ struct Results: Codable {
     let available_quantity: Int?
     let seller: Seller?
     let address: Address?
-    
 }
 
 struct Address: Codable {
+    
     let state_name: String?
     let city_name: String?
 }
 
 struct Seller: Codable {
+    
     let id: Int?
     let permalink: String?
 }

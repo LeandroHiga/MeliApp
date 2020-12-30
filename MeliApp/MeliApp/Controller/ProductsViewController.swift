@@ -9,6 +9,7 @@ import UIKit
 
 class ProductsViewController: UITableViewController {
 
+    //Products fetched from previous screen
     var products: ProductData?
 
     override func viewDidLoad() {

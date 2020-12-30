@@ -61,15 +61,13 @@ class ProductDetailViewController: UIViewController {
             cityLabel.text = "Ciudad: \(city)"
         }
 
-        publicationTextView.sizeToFit()
-        sellerTextView.sizeToFit()
-        
         if let imageLink = product?.thumbnail {
             
             //Use https to secure connection
             let imageURL = imageLink.replacingOccurrences(of: "http:", with: "https:")
             let finalImageURL = URL(string: imageURL)
             
+            //Set image with product thumbnail
             imageView.sd_setImage(with: finalImageURL, placeholderImage: UIImage(systemName: "photo"), options: .continueInBackground, completed: nil)
         }
         
@@ -78,7 +76,7 @@ class ProductDetailViewController: UIViewController {
         sellerTextView.textAlignment = .center
     }
     
-    //Add hyperlink -> redirect to publication
+    //Add hyperlink -> redirect to publication and seller profile
     func updateTextView(publication: String, seller: String) {
         
         if let safeSeller = product?.seller?.permalink, let safePublication = product?.permalink {
